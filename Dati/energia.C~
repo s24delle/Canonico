@@ -1,0 +1,28 @@
+{
+
+  TGraph g;
+  ifstream file("energia.dat");
+  double dati;
+  int i=0;
+  
+  while(file>>dati){
+    
+  }
+
+
+  TF1 f("f","[0]*x^2+[1]*x+[2]");
+
+  g.Fit("f");
+  g.SetMarkerStyle(31);
+  g.Draw("ap");
+
+
+
+
+
+
+
+
+
+
+}
