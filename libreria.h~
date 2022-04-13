@@ -1,0 +1,28 @@
+#ifndef LIBRERIA_H
+#define LIBRERIA_H
+
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <TCanvas.h>
+#include <TRandom3.h>
+#include <TApplication.h>
+#include <TGraphErrors.h>
+#include <fstream>
+
+
+using namespace std;
+
+
+void readfile(string nomefile, int &n, vector<string>& at, vector<double>& X, vector<double>& Y, vector<double>& Z);
+
+double energia_pot(int n, double epsilon, double sigma,double kb, vector<double>& X, vector<double>& Y, vector<double>& Z);
+
+
+
+
+
+
+
+
+#endif

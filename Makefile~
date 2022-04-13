@@ -1,0 +1,14 @@
+CC         = g++ 
+CFLAGS     = --std=c++11 -g -Wall
+CFLAGSROOT = `root-config --cflags`
+LIBSROOT   = `root-config --glibs`
+
+all: Argon
+
+Library.o: Library.cpp
+	$(CC) $(CFLAGS) -c Library.cpp      $(CFLAGSROOT) $(LIBSROOT)
+Argon: Argon.cpp Library.o
+	$(CC) $(CFLAGS) -o Argon Argon.cpp Library.o $(CFLAGSROOT) $(LIBSROOT)
+
+clean:
+	rm *.o
